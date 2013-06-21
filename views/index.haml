@@ -1,0 +1,56 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{ "data-toggle".to_sym => "collapse", "data-target".to_sym => ".nav-collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => '/'}
+        =company_name
+      .nav-collapse
+        %ul.nav
+          %li
+            %a{:href => '/'}Home
+          %li
+            %a{:href => '/'}About
+          %li
+            %a{:href => '/'}Contact
+
+.container
+  .hero-unit
+    %h1
+      =company_name
+    %p
+      ="Our #{Faker::Company.catch_phrase} enables us to #{Faker::Company.bs} and #{Faker::Company.bs}."
+    %p
+      %a.btn.btn-primary.btn-large{} Learn more
+
+  .row
+    .span4
+      %h2
+        =Faker::Company.catch_phrase.split(" ")[0..1].join(" ")
+      %p
+        ="Using #{Faker::Company.catch_phrase} we can #{Faker::Company.bs} and #{Faker::Company.bs}. Plus, with the power of #{Faker::Company.bs}, #{Faker::Company.catch_phrase} allows us to #{Faker::Company.bs}."
+      %p
+        %a.btn{:href => '/'} View Details
+    .span4
+      %h2
+        =Faker::Company.catch_phrase.split(" ")[0..1].join(" ")
+      %p
+        ="Using #{Faker::Company.catch_phrase} we can #{Faker::Company.bs} and #{Faker::Company.bs}. Plus, with the power of #{Faker::Company.bs}, #{Faker::Company.catch_phrase} allows us to #{Faker::Company.bs}."
+      %p
+        %a.btn{:href => '/'} View Details
+    .span4
+      %h2
+        =Faker::Company.catch_phrase.split(" ")[0..1].join(" ")
+      %p
+        ="Using #{Faker::Company.catch_phrase} we can #{Faker::Company.bs} and #{Faker::Company.bs}. Plus, with the power of #{Faker::Company.bs}, #{Faker::Company.catch_phrase} allows us to #{Faker::Company.bs}."
+      %p
+        %a.btn{:href => '/'} View Details
+
+  %hr
+
+  .footer
+    %p
+      &copy;
+      =company_name
